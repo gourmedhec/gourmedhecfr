@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.team {
+  position: relative;
+  width: 100vw;
+  height: 50svh;
+  background-color: #0f0f0f;
+  color: #e3e3db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em; /* écart entre le text ex log et les images de dessus */
+  overflow: hidden;
+}
+
+.profile-images {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  padding: 5px;
+  cursor: pointer;
+  will-change: width, height;
+}
+
+.img img {
+  border-radius: 0.5rem;
+}
+
+.profile-names {
+  width: 100%;
+  height: 15rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.name h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "DIN Condensed"; /*Barlow Condensed*/
+  font-size: 10rem;
+  font-weight: bold; /* 900 si barlow condensed*/
+  letter-spacing: -0.5rem;
+  line-height: 1;
+  color: #8F0000;
+  user-select: none;
+  transform: translateY(100%);
+}
+
+.name.default h1 {
+  color: #e3e3db;
+  transform: translateY(-100%);
+}
+
+.name h1 .letter {
+  position: relative;
+  transform: translateY(0%);
+  will-change: transform;
+}
+
+.profile-names {
+  position: relative;
+  height: 120px; /* ou hauteur adaptée à ta police */
+  overflow: hidden;
+  width: 100%;
+}
+
+.description {
+  position: absolute;   /* enlever absolute pour flow normal */
+  width: 100%;
+  text-align: center;   /* centrer le texte */
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100px;
+  line-height: 1.1;
+  color: #e3e3db;       /* adapter la couleur si besoin */
+  opacity: 1;
+  margin-top: 0.2em;    /* petit espacement sous le nom */
+  user-select: none;
+}
+
+/* Supprimer les règles qui rendaient .description absolute et top/left */
+
+.profile-descriptions {
+  position: relative;
+  height: auto;  /* height auto pour s’adapter */
+  overflow: visible;
+  margin-top: 0.5rem;
+}
+
+
+@media screen and (max-width: 900px) {
+  .team {
+    flex-direction: column-reverse;
+    margin-bottom: -1000px; /* espace en bas de chaque section ?? */
+  }
+
+  .profile-images {
+    flex-wrap: wrap;
+    max-width: 90%;
+    justify-content: center;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+    padding: 2.5px;
+  }
+
+  .profile-names {
+    height: 4rem;
+  }
+
+  .name h1 {
+    font-size: 4rem;
+    letter-spacing: 0;
+  }
+}
+
+
+
+.profile-descriptions {
+  position: relative;
+  height: 10rem; /* adapte en fonction de la taille souhaitée */
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.description {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-size: 0.75rem; /* plus petit que le titre */
+  line-height: 1.2rem;
+  opacity: 1;
+}
+
+.description:not(.default) {
+  pointer-events: none;
+}
