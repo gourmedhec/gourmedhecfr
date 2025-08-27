@@ -1,0 +1,94 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792]
+/Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Times-Roman
+>>
+endobj
+
+5 0 obj
+<<
+/Length 44
+>>
+stream
+BT
+/F1 12 Tf
+100 700 Td
+(Document vierge) Tj
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000079 00000 n 
+0000000136 00000 n 
+0000000271 00000 n 
+0000000347 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+438
+%%EOF1 0 obj
+<< /Info 7 0 R /Pages 2 0 R /Type /Catalog >>
+endobj
+3 0 obj
+<< /Resources << /Font << /F1 4 0 R >> >> /Type /Page /Contents 5 0 R /Rotate
+180 /MediaBox [ 0 0 612 792 ] /Parent 2 0 R >>
+endobj
+6 0 obj
+<< /Producer (macOS Version 14.0 \(Build 23A344\) Quartz PDFContext, AppendMode 1.1)
+/ModDate (D:20250827221626Z00'00') >>
+endobj
+7 0 obj
+6 0 R
+endobj
+xref
+0 2
+0000000000 65535 f 
+0000000597 00000 n 
+3 1
+0000000658 00000 n 
+6 2
+0000000798 00000 n 
+0000000936 00000 n 
+trailer
+<< /ID [<><92AEC7FF7CE1AD4529DBAC07DF9B5F09> ] /Root 1 0 R /Prev 438 /Size 8 >> 
+startxref
+957
+%%EOF
