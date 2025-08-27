@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOURMOSCOPE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #bc0000 0%, #8e164e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            font-weight: 300;
+            font-family: 'Din Condensed'
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .pdf-icon {
+            font-size: 4em;
+            color: #dc3545;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #bc0000, #8e164e);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #6ec24d, #419062);
+        }
+
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #bc0000;
+        }
+
+        .info h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .download-btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pdf-icon">📄</div>
+        <h1>GOURM'OSCOPE</h1>
+        <p class="subtitle">Clique sur le bouton ci-dessous pour télécharger notre trombinoscope</p>
+        
+        <a href="#" class="download-btn" id="downloadBtn">
+            📥 Télécharger le trombinoscope
+        </a>
+        
+        <div class="info">
+            <h3>À propos du document</h3>
+            <p>Ce trombinoscope est disponible au format PDF. Le téléchargement commencera automatiquement lorsque tu cliqueras sur le bouton.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Créer un lien temporaire et déclencher le téléchargement
+            const a = document.createElement('a');
+            a.href = 'mon-document.pdf'; // REMPLACEZ PAR LE NOM DE VOTRE FICHIER PDF
+            a.download = 'mon-document.pdf'; // Le nom du fichier téléchargé
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+</body>
+</html>
